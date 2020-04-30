@@ -1,0 +1,80 @@
+{
+    "_version": "1.1.0",
+    "start_url": "index.html",
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "vistron.art",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "1.1.0"
+        },
+        "title": "{{APP_TITLE}}",
+        "tags": {
+            "keywords": []
+        },
+        "dataSources": {
+        }
+    },
+    "sap.ui": {
+        "_version": "1.1.0",
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        },
+        "supportedThemes": [
+            "sap_belize",
+            "sap_fiori_3"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "dependencies": {
+            "minUI5Version": "1.70",
+            "libs": {
+                "sap.m": {                   
+                    "minVersion": "1.70"
+                }
+            }
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "rootView": "vistronart.view.App",
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "vistronart.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [{
+              "pattern": "",
+              "name": "home",
+              "target": "home"
+            }],
+            "targets": {
+                "home": {
+                  "viewName": "Home"
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        }
+    }
+}
