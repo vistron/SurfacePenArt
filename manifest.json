@@ -59,7 +59,10 @@
                 "viewPath": "vistronart.view",
                 "controlId": "app",
                 "controlAggregation": "pages",
-                "async": true
+                "async": true,
+                "bypassed": {
+                   "target": "notFound"
+                }
             },
             "routes": [{
               "pattern": "",
@@ -69,6 +72,10 @@
             "targets": {
                 "home": {
                   "viewName": "Home"
+                },
+                "notFound": {
+                   "viewName": "NotFound",
+                   "transition": "show"
                 }
             }
         },
