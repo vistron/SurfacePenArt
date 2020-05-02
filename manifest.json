@@ -5,11 +5,15 @@
         "_version": "1.1.0",
         "id": "vistron.art",
         "type": "application",
-        "i18n": "i18n/i18n.properties",
+        "i18n": {
+            "bundleUrl": "i18n/i18n.properties",
+            "supportedLocales": [""],
+            "fallbackLocale": ""
+        },
         "applicationVersion": {
             "version": "1.1.0"
         },
-        "title": "{{APP_TITLE}}",
+        "title": "{{appTitle}}",
         "tags": {
             "keywords": []
         },
@@ -48,7 +52,12 @@
         "models": {
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/i18n.properties"
+                "settings": {
+                    "bundleUrl": "i18n/i18n.properties",
+                    "async": false,
+                    "supportedLocales": [""],
+                    "fallbackLocale": ""
+                }
             }
         },
         "rootView": "vistronart.view.App",

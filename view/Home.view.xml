@@ -1,8 +1,33 @@
-<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt"
 		controllerName="vistronart.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml">
-<!-- 	<Page showHeader="false"> -->
-<!-- 		<content> -->
-<!-- 		</content> -->
-<!-- 	</Page> -->
-    <MessagePage showHeader="false" text="SurfacePen Art is under maintenance" description="" icon="sap-icon://add-equipment"/>
+	<tnt:ToolPage id="sideNav" sideExpanded="false">
+        <tnt:header>
+            <tnt:ToolHeader>
+                <Button id="sideNavigationToggleButton" icon="sap-icon://menu2" type="Transparent" press="onSideNavButtonPress" tooltip="{i18n>collapseMenu}">
+					<layoutData>
+					   <OverflowToolbarLayoutData priority="NeverOverflow"/>
+					</layoutData>
+				</Button>
+				<Title text="{i18n>appTitle}" level="H2"/>
+				<ToolbarSpacer/>
+				<Button tooltip="{i18n>selectLanguage}" type="Transparent" press="openLanguageOptions" icon="sap-icon://globe"/>
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation itemSelect="onItemSelect">
+                <tnt:NavigationList items="{ path: 'side>/navigation', templateShareable: false }">
+                    <tnt:NavigationListItem text="{side>text}" key="{side>key}" icon="{side>icon}"/>
+                </tnt:NavigationList>
+                <tnt:fixedItem>
+                    <tnt:NavigationList>
+                        <tnt:items>
+                            <tnt:NavigationListItem text="{i18n>feedback}" icon="sap-icon://feedback" key="feedback"/>
+                            <tnt:NavigationListItem text="{i18n>contact}" icon="sap-icon://customer-and-contacts" key="contact"/>
+                        </tnt:items>
+                    </tnt:NavigationList>
+                </tnt:fixedItem>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+	</tnt:ToolPage>
+<!--     <MessagePage showHeader="false" text="SurfacePen Art is under maintenance" description="" icon="sap-icon://add-equipment"/> -->
 </core:View>
