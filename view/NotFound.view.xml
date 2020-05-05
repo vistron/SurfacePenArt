@@ -1,3 +1,0 @@
-<core:View xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml">
-    <MessagePage showHeader="false" text="{i18n>notFoundText}" description="{i18n>notFoundDesc}" icon="sap-icon://documents"/>
-</core:View>
