@@ -133,6 +133,14 @@ body {
   .logout_btn:hover {
     background: #0B87A6; }
 
+.gradient-text {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #000, #777);
+  -webkit-background-clip: text;
+  color: transparent; }
+
 header {
   position: fixed;
   background: #22242A;
@@ -203,3 +211,129 @@ label #sidebar_btn {
   padding-right: 0.5rem; }
   label #sidebar_btn:hover {
     color: #19B3D3; }
+
+.navigation--checkbox {
+  display: none; }
+
+.navigation--button {
+  background-color: #fff;
+  height: 2.8rem;
+  width: 2.8rem;
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer; }
+
+.navigation--background {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-image: radial-gradient(#19B3D3, #053552);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.navigation--nav {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: -100rem;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.6, -0.55, 0.26, 1.25); }
+
+.navigation--list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation--item {
+  margin: 2rem; }
+
+.navigation--link:link, .navigation--link:visited {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 250%;
+  transition: all .4s; }
+
+.navigation--link:hover, .navigation--link:active {
+  background-position: 100%;
+  color: #000;
+  transform: translateX(1rem); }
+
+.navigation--checkbox:checked ~ .navigation--background {
+  transform: scale(80); }
+
+.navigation--checkbox:checked ~ .navigation--nav {
+  opacity: 1;
+  width: 100%;
+  left: 0rem; }
+
+.navigation--icon {
+  position: relative;
+  margin-top: 1.3rem; }
+  .navigation--icon, .navigation--icon::before, .navigation--icon::after {
+    width: 1.5rem;
+    height: 2px;
+    background-color: #22242A;
+    display: inline-block; }
+  .navigation--icon::before, .navigation--icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s; }
+  .navigation--icon::before {
+    top: -0.4rem; }
+  .navigation--icon::after {
+    top: 0.4rem; }
+
+.navigation--checkbox:checked + .navigation--button .navigation--icon {
+  background-color: transparent; }
+
+.navigation--checkbox:checked + .navigation--button .navigation--icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation--checkbox:checked + .navigation--button .navigation--icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
+@media screen and (min-width: 1110px) {
+  .navigation--button {
+    display: none; }
+  .navigation--background {
+    display: none; }
+  .navigation--nav {
+    position: unset;
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.6, -0.55, 0.26, 1.25); }
+  .navigation--list {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    top: 20%;
+    left: 100%; }
+  .navigation--link:link, .navigation--link:visited {
+    font-size: 1rem;
+    padding: 0.4rem 1rem; }
+  .navigation--link:hover, .navigation--link:active {
+    transform: translateX(0.5rem); }
+  .navigation--item {
+    margin: unset; } }
