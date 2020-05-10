@@ -299,15 +299,9 @@ label #sidebar_btn {
     left: 0;
     transition: all 0.2s; }
   .navigation--icon::before {
-    top: -0.5rem; }
+    top: -0.4rem; }
   .navigation--icon::after {
-    top: 0.5rem; }
-
-.navigation--button:hover .navigation--icon::before {
-  top: -0.8rem; }
-
-.navigation--button:hover .navigation--icon::after {
-  top: 0.8rem; }
+    top: 0.4rem; }
 
 .navigation--checkbox:checked + .navigation--button .navigation--icon {
   background-color: transparent; }
@@ -319,3 +313,27 @@ label #sidebar_btn {
 .navigation--checkbox:checked + .navigation--button .navigation--icon::after {
   top: 0;
   transform: rotate(-135deg); }
+
+@media screen and (min-width: 1110px) {
+  .navigation--button {
+    display: none; }
+  .navigation--background {
+    display: none; }
+  .navigation--nav {
+    position: unset;
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.6, -0.55, 0.26, 1.25); }
+  .navigation--list {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    top: 20%;
+    left: 100%; }
+  .navigation--link:link, .navigation--link:visited {
+    font-size: 1rem;
+    padding: 0.4rem 1rem; }
+  .navigation--link:hover, .navigation--link:active {
+    transform: translateX(0.5rem); }
+  .navigation--item {
+    margin: unset; } }
