@@ -102,12 +102,12 @@
         }
     }
 
-    // &--button:hover &--icon::before {
-    //     top: -0.8rem;
-    // }
-    // &--button:hover &--icon::after {
-    //     top: 0.8rem;
-    // }
+    &--button:hover &--icon::before {
+        top: -0.8rem;
+    }
+    &--button:hover &--icon::after {
+        top: 0.8rem;
+    }
 
     &--checkbox:checked + &--button &--icon {
         background-color: transparent;
@@ -133,6 +133,7 @@
         }
         &--nav{
             position: unset;
+            height: unset;
             z-index: 1;
             opacity: 1;
             transition: all 0.8s cubic-bezier(0.60, -0.55, 0.26, 1.25);

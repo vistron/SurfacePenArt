@@ -303,6 +303,12 @@ label #sidebar_btn {
   .navigation--icon::after {
     top: 0.4rem; }
 
+.navigation--button:hover .navigation--icon::before {
+  top: -0.8rem; }
+
+.navigation--button:hover .navigation--icon::after {
+  top: 0.8rem; }
+
 .navigation--checkbox:checked + .navigation--button .navigation--icon {
   background-color: transparent; }
 
@@ -321,6 +327,7 @@ label #sidebar_btn {
     display: none; }
   .navigation--nav {
     position: unset;
+    height: unset;
     z-index: 1;
     opacity: 1;
     transition: all 0.8s cubic-bezier(0.6, -0.55, 0.26, 1.25); }
