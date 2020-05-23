@@ -133,6 +133,9 @@ body {
   .logout_btn:hover {
     background: #0B87A6; }
 
+.greyButton {
+  background: #777777; }
+
 .gradient-text {
   font-size: 3.5rem;
   text-transform: uppercase;
