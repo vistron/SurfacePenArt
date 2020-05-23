@@ -1,0 +1,40 @@
+{
+  "name": "SurfacePenArt",
+  "version": "0.1.0",
+  "description": "Art with Surface Pen",
+  "author": "Vishnu Asokan",
+  "homepage": "https://vistron.github.io/SurfacePenArt/",
+  "dependencies": {
+    "express": "^4.16.4",
+    "gh-pages": "^2.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^4.3.1",
+    "react-router-sitemap": "^1.1.5",
+    "react-scripts": "3.4.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "eject": "react-scripts eject",
+    "compile:scss": "sass scss/style.scss css/style.css"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
