@@ -5,11 +5,11 @@ class navItems extends Component {
         super(props);
         this.state = {
             menus: [
-                {key: "POR", text: "Portrait"},
-                {key: "ILL", text: "Illustration"},
-                {key: "FAN", text: "Fan Art"},
-                {key: "BLO", text: "Blogs"},
-                {key: "ABT", text: "About"}
+                {key: "portrait", text: "Portrait"},
+                {key: "illustration", text: "Illustration"},
+                {key: "fanart", text: "Fan Art"},
+                {key: "blogs", text: "Blogs"},
+                {key: "about", text: "About"}
             ]
         };
     }
@@ -24,7 +24,7 @@ class navItems extends Component {
                 <nav className="navigation--nav">
                     <ul className="navigation--list">
                         {this.state.menus.map(menuItem => {
-                            return <li className="navigation--item" key={menuItem.key}><a href="/#" className="navigation--link">{menuItem.text}</a></li>
+                            return <li className="navigation--item" key={menuItem.key}><a href={`/${menuItem.key}`} className="navigation--link">{menuItem.text}</a></li>
                         })}
                     </ul>
                 </nav>
