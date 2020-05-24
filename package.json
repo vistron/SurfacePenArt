@@ -23,7 +23,7 @@
     "predeploy": "npm run build && COPY \"CNAME\" \"./build/CNAME\"",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
-    "compile:scss": "sass scss/style.scss css/style.css"
+    "compile:scss": "node-sass scss/style.scss src/css/style.css"
   },
   "browserslist": {
     "production": [
