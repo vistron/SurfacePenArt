@@ -13,6 +13,13 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif; }
 
+html {
+  height: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background: linear-gradient(to left top, #10112C, #52698C) fixed; }
+
 .left_area {
   color: unset;
   display: inline-block;
