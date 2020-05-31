@@ -14,6 +14,7 @@ function App() {
       <Switch>
         <Route component={HomePage} exact path="/"/>
         <Route component={Portrait} path="/portrait"/>
+        <Route component={NotFound}/>
       </Switch>
       </BrowserRouter>
     </div>

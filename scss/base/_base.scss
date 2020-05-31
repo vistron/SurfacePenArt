@@ -9,5 +9,5 @@ html {
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background: linear-gradient(to left top, #10112C, #52698C) fixed;
+    background: linear-gradient(to left top, $gradient-dark, $gradient-light) fixed;
   }

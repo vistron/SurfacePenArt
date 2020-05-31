@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 
-class Portrait extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
 
+class Portrait extends Component {
     render() {
         return (
             <div className="content">
