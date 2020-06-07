@@ -4,7 +4,7 @@ class Logo extends Component {
     render() {
         return (
         <a href="/" className="left_area">
-            <h3>Surface Pen <span>Art</span></h3>
+            <h3>Vistron <span>Art</span></h3>
         </a>);
     }
 }

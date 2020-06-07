@@ -10,7 +10,7 @@ const imageCard = (props) => {
                             <img src={cardItem.imageURL} alt="images"/>
                         </div>
                         <div className="box--details">
-                            <h2>Portrait</h2>
+                            <h2>{cardItem.title}</h2>
                         </div>
                     </a>
                 )
