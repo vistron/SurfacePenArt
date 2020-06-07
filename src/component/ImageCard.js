@@ -7,7 +7,7 @@ const imageCard = (props) => {
                 return (
                     <a className="box--card" href={cardItem.to} key={cardItem.key}>
                         <div className="box--imgBx">
-                            <img src={cardItem.src} alt="images"/>
+                            <img src={cardItem.imageURL} alt="images"/>
                         </div>
                         <div className="box--details">
                             <h2>Portrait</h2>
