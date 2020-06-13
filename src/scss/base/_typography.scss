@@ -8,7 +8,7 @@
     animation-timing-functions: ease-out;
 
     & h3 {
-      color: $color-white;
+      @include theme-aware('color', 'title-color');
       margin-top:0;
       margin-bottom: 0;
       text-transform: uppercase;

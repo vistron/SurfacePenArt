@@ -8,6 +8,10 @@ import './scss/style.scss';
 import './i18n';
 
 function App() {
+	const themes = [ 'light', 'dark' ],
+		bLightTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+	document.documentElement.className = '';
+	document.documentElement.classList.add(`theme-${themes[~~bLightTheme]}`);
 	return (
 		<div>
 			<Toolbar />

@@ -1,49 +1,49 @@
 {
-  "name": "VistronArt",
-  "version": "0.1.0",
-  "description": "Art with Surface Pen",
-  "author": "Vishnu Asokan",
-  "homepage": "https://surfacepenart.com",
-  "dependencies": {
-    "express": "^4.16.4",
-    "gh-pages": "^2.2.0",
-    "i18next": "^19.4.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^5.2.0",
-    "react-i18next": "^9.0.10",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^4.3.1",
-    "react-router-sitemap": "^1.1.5",
-    "react-scripts": "3.4.1",
-    "redux": "^4.0.5"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "node-sass": "^4.14.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build && COPY \"CNAME\" \"./build/CNAME\"",
-    "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject",
-    "compile:scss": "node-sass scss/style.scss src/css/style.css",
-    "sitemap": "babel-node src/sitemap-generator.js"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+	"name": "VistronArt",
+	"version": "0.1.0",
+	"description": "Art with Surface Pen",
+	"author": "Vishnu Asokan",
+	"homepage": "https://surfacepenart.com",
+	"dependencies": {
+		"express": "^4.16.4",
+		"gh-pages": "^2.2.0",
+		"i18next": "^19.4.5",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-helmet": "^5.2.0",
+		"react-i18next": "^9.0.10",
+		"react-redux": "^7.2.0",
+		"react-router-dom": "^4.3.1",
+		"react-router-sitemap": "^1.1.5",
+		"react-scripts": "3.4.1",
+		"redux": "^4.0.5"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-react": "^6.24.1",
+		"babel-register": "^6.26.0",
+		"node-sass": "^4.14.1"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"predeploy": "npm run build && COPY \"CNAME\" \"./build/CNAME\"",
+		"deploy": "gh-pages -d build",
+		"eject": "react-scripts eject",
+		"compile:scss": "node-sass src/scss/style.scss src/style.css",
+		"sitemap": "babel-node src/sitemap-generator.js"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
 }
