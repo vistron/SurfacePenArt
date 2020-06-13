@@ -1,9 +1,10 @@
 import React from 'react';
+import { withNamespaces } from 'react-i18next';
 
 const homePage = (props) => (
-    <div className="content">
-        <h3>404: Page Not Found</h3>
-    </div>
+	<div className="content">
+		<h3>{props.t('notFoundText')}</h3>
+	</div>
 );
 
-export default homePage;
+export default withNamespaces()(homePage);

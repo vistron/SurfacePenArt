@@ -5,20 +5,21 @@ import HomePage from './view/Home';
 import Portrait from './view/Portrait';
 import NotFound from './view/NotFound';
 import './scss/style.scss';
+import './i18n';
 
 function App() {
-  return (
-    <div>
-      <Toolbar/>
-      <BrowserRouter basename="https://surfacepenart.com">
-      <Switch>
-        <Route component={HomePage} exact path="/"/>
-        <Route component={Portrait} path="/portrait"/>
-        <Route component={NotFound}/>
-      </Switch>
-      </BrowserRouter>
-    </div>
-  );
+	return (
+		<div>
+			<Toolbar />
+			<BrowserRouter basename="https://surfacepenart.com">
+				<Switch>
+					<Route component={HomePage} exact path="/" />
+					<Route component={Portrait} path="/portrait" />
+					<Route component={NotFound} />
+				</Switch>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

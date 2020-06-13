@@ -1,0 +1,11 @@
+{
+	"appName": "Vistron Art",
+	"appSubPart": "Vistron",
+	"art": "Art",
+	"menu.portrait": "Portrait",
+	"menu.illustration": "Illustration",
+	"menu.fanArt": "Fan Art",
+	"menu.blogs": "Blogs",
+	"menu.about": "About",
+	"notFoundText": "404: Page Not Found"
+}
