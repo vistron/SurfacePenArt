@@ -26,7 +26,7 @@ class navItems extends Component {
 					<ul className="navigation--list">
 						{this.state.menus.map((menuItem) => {
 							return (
-								<li className="navigation--item" key={menuItem.key}>
+								<li className="navigation--item neoMorph" key={menuItem.key}>
 									<a href={`/${menuItem.key}`} className="navigation--link">
 										{menuItem.text}
 									</a>

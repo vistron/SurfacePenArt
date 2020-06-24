@@ -7,18 +7,24 @@ $gradient-light: #6a84ad;
 $gradient-dark: #292b67;
 
 $themes: (
-    light: (
-        color-background: #FAFAFA,
-        title-color: #212121,
-        text-color: $color-black,
-        text-hovered: $color-white,
-        box-color: $color-black
-    ),
-    dark: (
-        color-background: #37474F,
-        title-color: $color-white,
-        text-color: $color-white,
-        text-hovered: $color-black,
-        box-color: $color-white
-    )
+	light:
+		(
+			color-background: #d8d8d8,
+			title-color: #212121,
+			text-color: $color-black,
+			text-hovered: $color-white,
+			box-color: $color-black,
+			neoMorphHighlight: #ffffff,
+			neoMorphShadow: #979898
+		),
+	dark:
+		(
+			color-background: #37474f,
+			title-color: $color-white,
+			text-color: $color-white,
+			text-hovered: $color-black,
+			box-color: $color-white,
+			neoMorphHighlight: #535f65,
+			neoMorphShadow: #1d313a
+		)
 );

@@ -1,94 +1,97 @@
-.content{
-  padding-top: 4rem;
-  background-position: center;
-  height: 100%;
-  display: flex;
-  justify-content:center;
-  align-items: center;
+.content {
+	padding-top: 4rem;
+	background-position: center;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.box{
-    width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap: 15px;
-    margin: 3rem auto;
-  }
+.box {
+	width: 1200px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	grid-gap: 15px;
+	margin: 3rem auto;
+}
 
-  .box--card{
-    position: relative;
-    width: 300px;
-    height: 350px;
-    background: #fff;
-    margin: 0 auto;
-    border-radius: 4px;
-    cursor: pointer;
-    box-shadow:0 2px 10px rgba($color-black,.2);
-  }
-  
-  .box--card:before,
-    .box--card:after {
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-    background: #fff;
-    transition: 0.5s;
-    z-index:-1;
-  }
-  .box--card:hover:before{
-      transform: rotate(20deg);
-      box-shadow: 0 2px 20px rgba($color-black,.2);
-  }
-  .box--card:hover:after{
-    transform: rotate(10deg);
-    box-shadow: 0 2px 20px rgba($color-black,.2);
-  }
-  .box--card .box--imgBx{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    bottom: 10px;
-    right: 10px;
-    background: #222;
-    transition: 0.5s;
-    z-index: 1;
-  }
-  @media screen and (max-width: 768px) {
-      .box--card .box--imgBx {
-         bottom: 50px;
-      }
-  }
-  
-  .box--card:hover .box--imgBx {
-    bottom: 50px;
-  }
-  
-  .box--card .box--imgBx img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .box--card .box--details{
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    height: 50px;
-    text-align: center;
-  }
-  
-  .box--card .box--details h2{
-      margin: 0;
-      padding: 12px;
-      font-weight: 600;
-      color: #777;
-      text-transform: uppercase;
-  }
+.box--card {
+	position: relative;
+	width: 300px;
+	height: 350px;
+	background: #fff;
+	margin: 0 auto;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow: 0 2px 10px rgba($color-black, .2);
+}
+
+.box--card:before,
+.box--card:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+	background: #fff;
+	transition: 0.5s;
+	z-index: -1;
+}
+.box--card:hover:before {
+	transform: rotate(20deg);
+	box-shadow: 0 2px 20px rgba($color-black, .2);
+}
+.box--card:hover:after {
+	transform: rotate(10deg);
+	box-shadow: 0 2px 20px rgba($color-black, .2);
+}
+.box--card .box--imgBx {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	bottom: 10px;
+	right: 10px;
+	background: #222;
+	transition: 0.5s;
+	z-index: 1;
+}
+@media screen and (max-width: 768px) {
+	.box--card .box--imgBx {
+		bottom: 50px;
+	}
+}
+
+.box--card:hover .box--imgBx {
+	bottom: 50px;
+}
+
+.box--card .box--imgBx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.box--card .box--details {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	height: 50px;
+	text-align: center;
+}
+
+.box--card .box--details h2 {
+	margin: 0;
+	padding: 12px;
+	font-weight: 600;
+	color: #777;
+	text-transform: uppercase;
+}
+.glassBlur {
+	backdrop-filter: blur(20px);
+}
