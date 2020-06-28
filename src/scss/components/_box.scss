@@ -94,4 +94,5 @@
 }
 .glassBlur {
 	backdrop-filter: blur(20px);
+	width: -webkit-fill-available;
 }

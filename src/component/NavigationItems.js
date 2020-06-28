@@ -14,6 +14,17 @@ class navItems extends Component {
 			]
 		};
 	}
+	componentDidMount() {
+		window.addEventListener(
+			'resize',
+			() => {
+				this.setState({
+					isMobile: window.innerWidth < 1110
+				});
+			},
+			false
+		);
+	}
 	render() {
 		return (
 			<div className="navigation">
@@ -26,7 +37,10 @@ class navItems extends Component {
 					<ul className="navigation--list">
 						{this.state.menus.map((menuItem) => {
 							return (
-								<li className="navigation--item neoMorph" key={menuItem.key}>
+								<li
+									className={this.state.isMobile ? 'navigation--item' : 'navigation--item neoMorph'}
+									key={menuItem.key}
+								>
 									<a href={`/${menuItem.key}`} className="navigation--link">
 										{menuItem.text}
 									</a>
