@@ -15,11 +15,12 @@ class navItems extends Component {
 		};
 	}
 	componentDidMount() {
+		this.setState({ isMobile: window.innerWidth < 915 });
 		window.addEventListener(
 			'resize',
 			() => {
 				this.setState({
-					isMobile: window.innerWidth < 1110
+					isMobile: window.innerWidth < 915
 				});
 			},
 			false
@@ -33,22 +34,20 @@ class navItems extends Component {
 					<span className="navigation--icon">&nbsp;</span>
 				</label>
 				<div className="navigation--background">&nbsp;</div>
-				<nav className="navigation--nav">
-					<ul className="navigation--list">
-						{this.state.menus.map((menuItem) => {
-							return (
-								<li
-									className={this.state.isMobile ? 'navigation--item' : 'navigation--item neoMorph'}
-									key={menuItem.key}
-								>
-									<a href={`/${menuItem.key}`} className="navigation--link">
-										{menuItem.text}
-									</a>
-								</li>
-							);
-						})}
-					</ul>
-				</nav>
+				<ul className="navigation--list">
+					{this.state.menus.map((menuItem) => {
+						return (
+							<li
+								className={this.state.isMobile ? 'navigation--item' : 'navigation--item neoMorph'}
+								key={menuItem.key}
+							>
+								<a href={`/${menuItem.key}`} className="navigation--link">
+									{menuItem.text}
+								</a>
+							</li>
+						);
+					})}
+				</ul>
 			</div>
 		);
 	}

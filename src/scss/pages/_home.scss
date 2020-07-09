@@ -1,7 +1,6 @@
 .banner {
 	@include theme-aware('color', 'text-color');
 	width: 100%;
-	padding-top: 4rem;
 	text-align: end;
 	display: flex;
 	justify-content: space-around;
