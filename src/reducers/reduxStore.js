@@ -20,6 +20,14 @@ const storeData = {
 			title: i18n.t('menu.fanArt'),
 			imageURL: '/assets/images/stanlee.jpg'
 		}
+	],
+	socialIcons: [
+		{
+			key: 1,
+			imageURL:
+				'https://png.pngtree.com/png-clipart/20190516/original/pngtree-instagram-social-media-icon-design-template-vector-png-image_3654765.jpg',
+			link: 'https://www.instagram.com/vistron'
+		}
 	]
 };
 

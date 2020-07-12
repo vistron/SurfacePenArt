@@ -3,6 +3,7 @@ import Toolbar from './component/Header';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import HomePage from './view/Home';
 import Portrait from './view/Portrait';
+import AboutPage from './view/About';
 import NotFound from './view/NotFound';
 import './scss/style.scss';
 import './i18n';
@@ -19,6 +20,7 @@ function App() {
 				<Switch>
 					<Route component={HomePage} exact path="/" />
 					<Route component={Portrait} path="/portrait" />
+					<Route component={AboutPage} path="/about" />
 					<Route component={NotFound} />
 				</Switch>
 			</BrowserRouter>

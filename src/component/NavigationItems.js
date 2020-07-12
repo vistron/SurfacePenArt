@@ -5,13 +5,7 @@ class navItems extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			menus: [
-				{ key: 'portrait', text: props.t('menu.portrait') },
-				{ key: 'illustration', text: props.t('menu.illustration') },
-				{ key: 'fanart', text: props.t('menu.fanArt') },
-				{ key: 'blogs', text: props.t('menu.blogs') },
-				{ key: 'about', text: props.t('menu.about') }
-			]
+			menus: [ { key: 'blogs', text: props.t('menu.blogs') }, { key: 'about', text: props.t('menu.about') } ]
 		};
 	}
 	componentDidMount() {
