@@ -24,9 +24,23 @@ const storeData = {
 	socialIcons: [
 		{
 			key: 1,
-			imageURL:
-				'https://png.pngtree.com/png-clipart/20190516/original/pngtree-instagram-social-media-icon-design-template-vector-png-image_3654765.jpg',
+			imageURL: '/assets/icons/instagram.svg',
 			link: 'https://www.instagram.com/vistron'
+		},
+		{
+			key: 2,
+			imageURL: '/assets/icons/facebook.svg',
+			link: 'http://facebook.com/vishnuEIN'
+		},
+		{
+			key: 3,
+			imageURL: '/assets/icons/twitter.svg',
+			link: 'https://twitter.com/vishnuEIN'
+		},
+		{
+			key: 4,
+			imageURL: '/assets/icons/deviantart.svg',
+			link: 'https://www.deviantart.com/vishnuein'
 		}
 	]
 };
