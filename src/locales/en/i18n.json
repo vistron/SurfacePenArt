@@ -2,6 +2,7 @@
 	"appName": "Vistron Art",
 	"appSubPart": "Vistron",
 	"art": "Art",
+	"websiteDesc": "Art with Surface Pen",
 	"menu.portrait": "Portrait",
 	"menu.illustration": "Illustration",
 	"menu.fanArt": "Fan Art",
@@ -9,5 +10,5 @@
 	"menu.about": "About",
 	"aboutText": "About Vistron Art",
 	"followTitle": "Connect me on below social links",
-	"notFoundText": "404: Page Not Found"
+	"notFoundText": "Page Not Found"
 }
