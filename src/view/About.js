@@ -15,20 +15,22 @@ const AboutPage = (props) => {
 					<div className="overlayTitle">{props.t('aboutText')}</div>
 				</div>
 			</div>
-			<div className="followTitle">{props.t('followTitle')}</div>
-			<div className="aboutSocial">
-				{props.icons.map((socialIconData) => {
-					return (
-						<a
-							href={socialIconData.link}
-							target="_blank"
-							rel="noopener noreferrer"
-							key={socialIconData.key}
-						>
-							<img src={socialIconData.imageURL} alt="icon" />
-						</a>
-					);
-				})}
+			<div className="social">
+				<div className="social--followTitle">{props.t('followTitle')}</div>
+				<div className="social--about">
+					{props.icons.map((socialIconData) => {
+						return (
+							<a
+								href={socialIconData.link}
+								target="_blank"
+								rel="noopener noreferrer"
+								key={socialIconData.key}
+							>
+								<img src={socialIconData.imageURL} alt="icon" />
+							</a>
+						);
+					})}
+				</div>
 			</div>
 		</div>
 	);

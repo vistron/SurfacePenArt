@@ -20,6 +20,9 @@ class navItems extends Component {
 			false
 		);
 	}
+	showPreference(oEvent) {
+		oEvent.preventDefault();
+	}
 	render() {
 		return (
 			<div className="navigation">
@@ -41,6 +44,18 @@ class navItems extends Component {
 							</li>
 						);
 					})}
+					<li
+						className={this.state.isMobile ? 'navigation--item' : 'navigation--item neoMorph'}>
+						<a href="#" onClick={this.showPreference} className="navigation--link">
+							{this.state.isMobile ? 
+								(
+									this.props.t('menu.pref')
+								) : (
+									<div className="fas fa-cog"></div>
+								)
+							}
+						</a>
+					</li>
 				</ul>
 			</div>
 		);
