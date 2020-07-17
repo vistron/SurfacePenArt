@@ -16,7 +16,7 @@ function App() {
 	return (
 		<div>
 			<Toolbar />
-			<BrowserRouter basename="https://surfacepenart.com">
+			<BrowserRouter basename="{process.env.PUBLIC_URL}">
 				<Switch>
 					<Route component={HomePage} exact path="/" />
 					<Route component={Portrait} path="/portrait" />
