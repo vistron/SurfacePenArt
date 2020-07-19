@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { withNamespaces } from 'react-i18next';
 
+const themes = [ 'light', 'dark' ];
 class navItems extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			showPref: false,
+			bLightTheme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches,
+			themeSelected: localStorage.getItem('theme') ? localStorage.getItem('theme') : null,
 			menus: [
 				{ key: 'digiart', text: props.t('menu.digiArt') },
 				{ key: 'blogs', text: props.t('menu.blogs') },
@@ -14,6 +17,7 @@ class navItems extends Component {
 		};
 	}
 	componentDidMount() {
+		this.changeTheme();
 		this.setState({
 			isMobile: window.innerWidth < 915
 		});
@@ -27,10 +31,18 @@ class navItems extends Component {
 			false
 		);
 	}
-	showPreference(oEvent) {
-		// this.setState({
-		// 	showPref: !this.state.showPref
-		// });
+	changeTheme() {
+		document.documentElement.className = '';
+		if (!this.state.themeSelected) {
+			this.state.themeSelected = themes[~~this.state.bLightTheme];
+		}
+		document.documentElement.classList.add(`theme-${this.state.themeSelected}`);
+	}
+	async showPreference(oEvent) {
+		const sOppTheme = document.documentElement.classList.value.split('-')[1] === 'dark' ? 'light' : 'dark';
+		localStorage.setItem('theme', sOppTheme);
+		await this.setState({ themeSelected: sOppTheme });
+		this.changeTheme();
 	}
 	render() {
 		return (
@@ -62,7 +74,15 @@ class navItems extends Component {
 							}}
 							className="navigation--link"
 						>
-							{this.state.isMobile ? this.props.t('menu.pref') : <div className="fas fa-cog" />}
+							{this.state.isMobile ? (
+								this.props.t('menu.pref')
+							) : (
+								<div
+									className={
+										this.state.themeSelected === 'light' ? 'far fa-moon' : 'far fa-lightbulb'
+									}
+								/>
+							)}
 						</a>
 					</li>
 				</ul>

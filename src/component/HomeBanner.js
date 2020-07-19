@@ -6,7 +6,7 @@ const HomeBanner = (props) => (
 		<div className="title">
 			Request your own <span>digital art</span>
 		</div>
-		<div />
+		<div className="fas fa-portrait banner--profileIcon" />
 	</div>
 );
 

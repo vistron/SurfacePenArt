@@ -25,4 +25,9 @@
 		pointer-events: none;
 		user-select: none;
 	}
+
+	&--profileIcon {
+		cursor: pointer;
+		font-size: 8rem;
+	}
 }
