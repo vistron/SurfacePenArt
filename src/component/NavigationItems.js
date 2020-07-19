@@ -75,7 +75,7 @@ class navItems extends Component {
 							className="navigation--link"
 						>
 							{this.state.isMobile ? (
-								this.props.t('menu.pref')
+								this.props.t(this.state.themeSelected === 'light' ? 'lightTheme' : 'darkTheme')
 							) : (
 								<div
 									className={

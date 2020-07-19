@@ -9,7 +9,8 @@
 	"menu.blogs": "Blogs",
 	"menu.digiArt": "Digital Art",
 	"menu.about": "About",
-	"menu.pref": "Preferences",
+	"darkTheme": "Dark Theme",
+	"lightTheme": "Light Theme",
 	"aboutText": "About Vistron Art",
 	"followTitle": "Contact me on below social links",
 	"notFoundText": "Page Not Found"
