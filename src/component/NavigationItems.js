@@ -14,7 +14,9 @@ class navItems extends Component {
 		};
 	}
 	componentDidMount() {
-		this.setState({ isMobile: window.innerWidth < 915 });
+		this.setState({
+			isMobile: window.innerWidth < 915
+		});
 		window.addEventListener(
 			'resize',
 			() => {
@@ -33,7 +35,7 @@ class navItems extends Component {
 	render() {
 		return (
 			<div className="navigation">
-				<input type="checkbox" className="navigation--checkbox" id="navi-toggle" />
+				<input type="checkbox" className="navigation--checkbox" autocomplete="off" id="navi-toggle" />
 				<label htmlFor="navi-toggle" className="navigation--button">
 					<span className="navigation--icon">&nbsp;</span>
 				</label>
