@@ -23,5 +23,6 @@
 
 .neoMorph {
 	@include theme-aware-neoMorph('box-shadow', 'neoMorphShadow', 'neoMorphHighlight');
+	@include theme-aware('background-color', 'color-background');
 	border-radius: 5px;
 }

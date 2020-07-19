@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ImageCard from '../component/ImageCard';
 import HomeBanner from '../component/HomeBanner';
 import { withNamespaces } from 'react-i18next';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 class HomePage extends Component {
 	render() {
@@ -11,7 +11,7 @@ class HomePage extends Component {
 			<div>
 				<Helmet>
 					<title>{this.props.t('appName')}</title>
-					<meta name="description" content={this.props.t('websiteDesc')}/>
+					<meta name="description" content={this.props.t('websiteDesc')} />
 				</Helmet>
 				<HomeBanner />
 				<div className="content">

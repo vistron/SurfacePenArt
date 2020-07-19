@@ -5,7 +5,12 @@ class navItems extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			menus: [ { key: 'blogs', text: props.t('menu.blogs') }, { key: 'about', text: props.t('menu.about') } ]
+			showPref: false,
+			menus: [
+				{ key: 'digiart', text: props.t('menu.digiArt') },
+				{ key: 'blogs', text: props.t('menu.blogs') },
+				{ key: 'about', text: props.t('menu.about') }
+			]
 		};
 	}
 	componentDidMount() {
@@ -21,7 +26,9 @@ class navItems extends Component {
 		);
 	}
 	showPreference(oEvent) {
-		oEvent.preventDefault();
+		// this.setState({
+		// 	showPref: !this.state.showPref
+		// });
 	}
 	render() {
 		return (
@@ -44,16 +51,16 @@ class navItems extends Component {
 							</li>
 						);
 					})}
-					<li
-						className={this.state.isMobile ? 'navigation--item' : 'navigation--item neoMorph'}>
-						<a href="#" onClick={this.showPreference} className="navigation--link">
-							{this.state.isMobile ? 
-								(
-									this.props.t('menu.pref')
-								) : (
-									<div className="fas fa-cog"></div>
-								)
-							}
+					<li className={this.state.isMobile ? 'navigation--item' : 'navigation--item neoMorph'}>
+						<a
+							href="#"
+							onClick={(e) => {
+								e.preventDefault();
+								this.showPreference();
+							}}
+							className="navigation--link"
+						>
+							{this.state.isMobile ? this.props.t('menu.pref') : <div className="fas fa-cog" />}
 						</a>
 					</li>
 				</ul>

@@ -1,16 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { withNamespaces } from 'react-i18next';
-import {Helmet} from "react-helmet";
+import { Helmet } from 'react-helmet';
 
 const AboutPage = (props) => {
 	return (
 		<div>
 			<Helmet>
 				<title>{props.t('aboutText')}</title>
-				<meta name="description" content={props.t('websiteDesc')}/>
-            </Helmet>
-			<div className="content">
+				<meta name="description" content={props.t('websiteDesc')} />
+			</Helmet>
+			<div className="content toolbarSpace">
 				<div className="overlayImage">
 					<div className="overlayTitle">{props.t('aboutText')}</div>
 				</div>
