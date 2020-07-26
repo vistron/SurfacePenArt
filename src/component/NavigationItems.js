@@ -36,6 +36,9 @@ class navItems extends Component {
 		if (!this.state.themeSelected) {
 			this.state.themeSelected = themes[~~this.state.bLightTheme];
 		}
+		if (this.state.isMobile) {
+			document.getElementById('navi-toggle').checked = false;
+		}
 		document.documentElement.classList.add(`theme-${this.state.themeSelected}`);
 	}
 	async showPreference(oEvent) {
@@ -75,7 +78,7 @@ class navItems extends Component {
 							className="navigation--link"
 						>
 							{this.state.isMobile ? (
-								this.props.t(this.state.themeSelected === 'light' ? 'lightTheme' : 'darkTheme')
+								this.props.t(this.state.themeSelected === 'light' ? 'darkTheme' : 'lightTheme')
 							) : (
 								<div
 									className={
