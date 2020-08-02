@@ -20,6 +20,7 @@ function App() {
 					<Route component={NotFound} />
 				</Switch>
 			</BrowserRouter>
+			<div id="ui-static" style={{ height: '0px', width: '0px', overflow: 'hidden', float: 'left' }} />
 		</div>
 	);
 }

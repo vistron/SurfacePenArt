@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM, { unmountComponentAtNode } from 'react-dom';
 import { withNamespaces } from 'react-i18next';
 
 const themes = [ 'light', 'dark' ];
@@ -10,7 +11,7 @@ class navItems extends Component {
 			bLightTheme: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches,
 			themeSelected: localStorage.getItem('theme') ? localStorage.getItem('theme') : null,
 			menus: [
-				{ key: 'digiart', text: props.t('menu.digiArt') },
+				{ key: '', text: props.t('menu.home') },
 				{ key: 'blogs', text: props.t('menu.blogs') },
 				{ key: 'about', text: props.t('menu.about') }
 			]
