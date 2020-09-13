@@ -9,6 +9,23 @@ import './scss/style.scss';
 import './i18n';
 
 function App() {
+	const setCookie = (sCookieName, sValue) => {
+		let sExpiresDate, oDate = new Date();
+		oDate.setTime(oDate.getTime() + (356 * 24 * 60 * 60 * 1000)); // one year
+		sExpiresDate = "expires=" + oDate.toUTCString();
+		document.cookie = sCookieName + "=" + sValue + ";" + sExpiresDate + ";path=/";
+	},
+	getCookieValue = sCookieName => {
+		let aCookies = document.cookie.split(';'), sCookie;
+		sCookieName = sCookieName + "=";
+		for (var i = 0; i < aCookies.length; i++) {
+			sCookie = aCookies[i].trim();
+			if (sCookie.indexOf(sCookieName) === 0) {
+				return sCookie.substring(sCookieName.length, sCookie.length);
+			}
+		}
+		return "";
+	};
 	return (
 		<div>
 			<Toolbar />
