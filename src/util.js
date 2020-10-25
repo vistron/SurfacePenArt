@@ -6,7 +6,7 @@ const showMessageToast = (sMessage) => {
     if (staticElement) {
         const sTop = `${window.innerHeight - (window.innerHeight/6)}px`,
             sLeft = `${window.innerWidth/2}px`
-        ReactDOM.render(<div style={{top: sTop, left: sLeft, zIndex: 10}} className="MessageToast">{sMessage}</div>, staticElement);
+      ReactDOM.render(<div style={{ top: sTop, left: sLeft, zIndex: 10, position: "fixed" }} className="MessageToast">{sMessage}</div>, staticElement);
         setTimeout(() => {
             unmountComponentAtNode(staticElement);
         }, 1000);
