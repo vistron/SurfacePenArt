@@ -1,8 +1,33 @@
 import React, { Component } from 'react';
 
 class Portrait extends Component {
+    constructor(props) {
+		super(props);
+		this.state = {
+			items: [
+                {
+                    image: '',
+                    date: '2020-02-20'
+                },
+                {
+                    image: '',
+                    date: '2020-02-20'
+                },
+                {
+                    image: '',
+                    date: '2020-02-22'
+                }
+            ]
+		};
+	}
 	render() {
-		return <div className="content toolbarSpace" />;
+		return (<div className="content toolbarSpace">
+            {this.state.items.map(item => {
+                return (
+                <div>{item.image}</div>
+                );
+            })}
+        </div>);
 	}
 }
 
