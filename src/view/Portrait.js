@@ -6,7 +6,7 @@ class Portrait extends Component {
     this.state = {
       items: [
         {
-          image: '',
+          image: 'Image 1',
           date: '2020-02-20'
         },
         {
